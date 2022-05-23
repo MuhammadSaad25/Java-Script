@@ -9,8 +9,25 @@
 </head>
 
 <body>
+
+    <label> User Name: <input type="text" id="user-name" name=	"user-name" /></label>
+    <button onclick="register()">Register</button>
+
+    <h2 id="greet-user"></h2>
+
+
+
+
     <script>
+        let inputElement = document.querySelector("#user-name");
+        let h2Element = document.querySelector("#greet-user");
+
+        function register() {
+            h2Element.innerHTML = "Welcome Mr. " + inputElement.value;
+        }
     </script>
+
+
 </body>
 
 </html>
