@@ -43,14 +43,19 @@
         </div>
     </div>
 
-    <h2>Temperature Converter</h2>
-    <p>Type a value in the Fahrenheit field to convert the value to Celsius:</p>
+    <div class="Tempreture_box">
 
-    <p>
-        <label>Fahrenheit</label>
-        <input id="inputFahrenheit" type="number" placeholder="Fahrenheit" oninput="temperatureConverter(this.value)" onchange="temperatureConverter(this.value)">
-    </p>
-    <p>Celcius: <span id="outputCelcius"></span></p>
+        <h2>Temperature Converter</h2>
+        <p>Type a value in the Fahrenheit field to convert the value to Celsius:</p>
+
+        <p>
+            <label>Fahrenheit</label>
+            <input id="inputFahrenheit" type="number" placeholder="Fahrenheit" oninput="temperatureConverter(this.value)" onchange="temperatureConverter(this.value)">
+        </p>
+        <p>Celcius: <span id="outputCelcius"></span></p>
+
+    </div>
+
     <!-- 
     <p>Type a value in the Celsius field to convert the value to Fahrenheit:</p>
 
@@ -61,6 +66,25 @@
     <p>Fahrenheit: <span id="outputFahrenheit"></span></p> -->
 
 
+
+
+    <div class="item_box">
+        <h1>Shoping Cart</h1>
+        <b>Item 1 Select Quantity (price item 1 600)</b>
+        <input style="margin-left:20px;" id="item-Quantity" type="number" placeholder="Select">
+        <b>Item 2 Select Quantity (price item 2 200)</b>
+        <input style="margin-left:20px;" id="item-Quantity2" type="number" placeholder="Select">
+        <br>
+    </div>
+    <button class="purchase_btn" onclick="submit()">Purchase</button>
+
+    <div class="msg_box">
+
+        <h1 id="total_amount1"></h1>
+        <h1 id="total_amount2"></h1>
+        <h1 id="thanks_msg"></h1>
+
+    </div>
 
     <br> <br> <br> <br>
 
@@ -84,6 +108,42 @@
         function temperatureConverter(valNum) {
             valNum = parseFloat(valNum);
             document.getElementById("outputCelcius").innerHTML = (valNum - 32) / 1.8;
+        }
+
+
+        function submit() {
+
+            let item1Quantity = document.querySelector('#item-Quantity').value;
+            // console.log("ticketQuantity", ticketQuantity)
+            let item2Quantity = document.querySelector('#item-Quantity2').value;
+            // console.log("ticketQuantity", ticketQuantity)
+
+            let item1Price = 650;
+
+            let item2Price = 100;
+
+            let shppingCharges = 100;
+
+            let result = item1Price * item1Quantity;
+
+            let result1 = item2Price * item2Quantity;
+
+            let result3 = result + result1 + shppingCharges;
+
+            console.log("result3", result3)
+
+
+            // console.log("result", "Total cost to buy " + ticketQuantity + " tickets to a movie is" + result);
+
+            let total_amount1Element = document.querySelector('#total_amount1');
+            total_amount1Element.innerHTML = "Total Amount to purchase item 1 is " + result;
+
+            let total_amount2Element = document.querySelector('#total_amount2');
+            total_amount2Element.innerHTML = "Total Amount to purchase item 2 is " + result1;
+
+            let thanks_msgElement = document.querySelector('#thanks_msg');
+            thanks_msgElement.innerHTML = "Total Amount Whit Shipping Charges  " + result3 + '<br>' + '<h1>Thanks For Shoping With Us</h1>';
+
         }
 
         // function temperatureConverter(valNum1) {
@@ -118,33 +178,39 @@
         // let result4 = a % b;
         // alert("modulus of " + a + " and " + b + " is " + result4);
 
-        let declareVariable = "";
+        // let declareVariable = "";
 
-        document.write("declareVariable ", declareVariable + "<br>");
+        // document.write("declareVariable ", declareVariable + "<br>");
 
-        declareVariable = 5;
-        document.write("Initialize Value " + declareVariable + "<br>");
+        // declareVariable = 5;
+        // document.write("Initialize Value " + declareVariable + "<br>");
 
-        document.write("Value After Increment the variable " + ++declareVariable + "<br>");
+        // document.write("Value After Increment the variable " + ++declareVariable + "<br>");
 
-        let b = Number(7);
-        document.write("Value After Addtion 7 " + (declareVariable + b) + "<br>");
+        // let d = Number(7);
+        // document.write("Value After Addtion 7 " + (declareVariable + d) + "<br>");
 
 
-        --declareVariable;
+        // --declareVariable;
 
-        document.write("Value After Decriment " + (declareVariable + b) + "<br>");
+        // document.write("Value After Decriment " + (declareVariable + d) + "<br>");
 
-        document.write("The remainder is :  " + ((declareVariable + b) % 3) + "<br>");
+        // document.write("The remainder is :  " + ((declareVariable + d) % 3) + "<br>");
 
-        let a = +prompt("Enter your desire tabel number :")
-        document.write("<h1>Table of</h1>", `<h1>${a}</h1>`)
-        for (let i = 1; i <= 10; i++) {
-            let c = a * i;
-            console.log(`${a} x ${i} = ${c}`);
-            document.write(`${a} x ${i} = ${c}`);
-            document.write("<br>");
-        }
+        // let e = +prompt("Enter your desire tabel number :")
+        // document.write("<h1>Table of</h1>", `<h1>${e}</h1>`)
+        // for (let i = 1; i <= 10; i++) {
+        //     let c = e * i;
+        //     console.log(`${e} x ${i} = ${c}`);
+        //     document.write(`${a} x ${i} = ${c}`);
+        //     document.write("<br>");
+        // }
+
+
+        // let item1 = 650;
+        // document.write("price of item 1 is " + item1)
+        // let itemQuantity = document.querySelector('item Quantity').value;
+        // document.write(item1 * itemQuantity)
     </script>
 </body>
 

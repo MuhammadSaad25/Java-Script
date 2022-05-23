@@ -65,3 +65,25 @@ body {
 .box2 h1 {
     margin: 0;
 }
+
+.purchase_btn {
+    margin-left: 650px;
+    margin-top: 10px;
+    width: 80px;
+    height: 30px;
+    border-radius: 30px;
+    background-color: black;
+    color: white
+}
+
+.Tempreture_box {
+    text-align: center;
+}
+
+.item_box {
+    text-align: center;
+}
+
+.msg_box {
+    text-align: center;
+}
