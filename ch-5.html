@@ -32,7 +32,7 @@
                 <br>
 
                 <div class="box1-subbox">
-                    <button onclick="submit()">Buy</button>
+                    <button onclick="submit1()">Buy</button>
                 </div>
             </div>
 
@@ -70,9 +70,9 @@
 
     <div class="item_box">
         <h1>Shoping Cart</h1>
-        <b>Item 1 Select Quantity (price item 1 600)</b>
+        <b>Item 1 Select Quantity (price item 1 650)</b>
         <input style="margin-left:20px;" id="item-Quantity" type="number" placeholder="Select">
-        <b>Item 2 Select Quantity (price item 2 200)</b>
+        <b>Item 2 Select Quantity (price item 2 100)</b>
         <input style="margin-left:20px;" id="item-Quantity2" type="number" placeholder="Select">
         <br>
     </div>
@@ -86,10 +86,17 @@
 
     </div>
 
+    <button onclick="qEight()">Q 08</button><br>
+    <button onclick="qNine()">Q 09</button> <br>
+    <button onclick="qTen()">Q 10</button> <br>
+    <button onclick="qEleven()">Q 11</button> <br>
+    <button onclick="qTwelve()">Q 12</button> <br>
+    <button onclick="qThirteen()">Q 13</button> <br>
+
     <br> <br> <br> <br>
 
     <script>
-        function submit() {
+        function submit1() {
 
             let ticketQuantity = document.querySelector('.ticket-value').value;
             // console.log("ticketQuantity", ticketQuantity)
@@ -153,64 +160,130 @@
 
 
 
-        // let a = 3;
-        // let b = 5;
-        // let result = a + b;
-        // alert("Sum of " + a + " and " + b + " is " + result);
+        let a = 3;
+        let b = 5;
+        let result = a + b;
+        alert("Sum of " + a + " and " + b + " is " + result);
 
-        // let a1 = 3;
-        // let b1 = 5;
-        // let result1 = a - b;
-        // alert("Subtraction of " + a + " and " + b + " is " + result1);
+        let a1 = 3;
+        let b1 = 5;
+        let result1 = a - b;
+        alert("Subtraction of " + a + " and " + b + " is " + result1);
 
-        // let a2 = 3;
-        // let b2 = 5;
-        // let result2 = a * b;
-        // alert("multiplication of " + a + " and " + b + " is " + result2);
+        let a2 = 3;
+        let b2 = 5;
+        let result2 = a * b;
+        alert("multiplication of " + a + " and " + b + " is " + result2);
 
-        // let a3 = 3;
-        // let b3 = 5;
-        // let result3 = a / b;
-        // alert("division of " + a + " and " + b + " is " + result3);
+        let a3 = 3;
+        let b3 = 5;
+        let result3 = a / b;
+        alert("division of " + a + " and " + b + " is " + result3);
 
-        // let a4 = 3;
-        // let b5 = 5;
-        // let result4 = a % b;
-        // alert("modulus of " + a + " and " + b + " is " + result4);
+        let a4 = 3;
+        let b5 = 5;
+        let result4 = a % b;
+        alert("modulus of " + a + " and " + b + " is " + result4);
 
-        // let declareVariable = "";
+        let declareVariable = "";
 
-        // document.write("declareVariable ", declareVariable + "<br>");
+        document.write("declareVariable ", declareVariable + "<br>");
 
-        // declareVariable = 5;
-        // document.write("Initialize Value " + declareVariable + "<br>");
+        declareVariable = 5;
+        document.write("Initialize Value " + declareVariable + "<br>");
 
-        // document.write("Value After Increment the variable " + ++declareVariable + "<br>");
+        document.write("Value After Increment the variable " + ++declareVariable + "<br>");
 
-        // let d = Number(7);
-        // document.write("Value After Addtion 7 " + (declareVariable + d) + "<br>");
-
-
-        // --declareVariable;
-
-        // document.write("Value After Decriment " + (declareVariable + d) + "<br>");
-
-        // document.write("The remainder is :  " + ((declareVariable + d) % 3) + "<br>");
-
-        // let e = +prompt("Enter your desire tabel number :")
-        // document.write("<h1>Table of</h1>", `<h1>${e}</h1>`)
-        // for (let i = 1; i <= 10; i++) {
-        //     let c = e * i;
-        //     console.log(`${e} x ${i} = ${c}`);
-        //     document.write(`${e} x ${i} = ${c}`);
-        //     document.write("<br>");
-        // }
+        let d = Number(7);
+        document.write("Value After Addtion 7 " + (declareVariable + d) + "<br>");
 
 
-        // let item1 = 650;
-        // document.write("price of item 1 is " + item1)
-        // let itemQuantity = document.querySelector('item Quantity').value;
-        // document.write(item1 * itemQuantity)
+        --declareVariable;
+
+        document.write("Value After Decriment " + (declareVariable + d) + "<br>");
+
+        document.write("The remainder is :  " + ((declareVariable + d) % 3) + "<br>");
+
+        let e = +prompt("Enter your desire tabel number :")
+        document.write("<h1>Table of</h1>", `<h1>${e}</h1>`)
+        for (let i = 1; i <= 10; i++) {
+            let c = e * i;
+            console.log(`${e} x ${i} = ${c}`);
+            document.write(`${e} x ${i} = ${c}`);
+            document.write("<br>");
+        }
+
+
+        function qEight() {
+            let engMarks = prompt(`Enter your English Marks`);
+            let urduMarks = prompt(`Enter your Urdu Marks`);
+            let mathMarks = prompt(`Enter your Math Marks`);
+            let totalMarks = 300;
+            let obtainedMarks = (Number(engMarks)) + (Number(urduMarks)) + (Number(mathMarks));
+            let percentageMarks = (obtainedMarks * 100) / totalMarks;
+            nPercentage = percentageMarks.toFixed(2);
+            nPercentage = parseFloat(nPercentage);
+            document.write(`Total Marks: ${totalMarks}<br>`);
+            document.write(`Marks obtained: ${obtainedMarks}<br>`);
+            document.write(`Percentage: ${nPercentage}%<br><br>`);
+        }
+
+        function qNine() {
+            let usd = 10,
+                saudiRiyal = 25;
+            usdToPkr = usd * 104.80, srToPkr = saudiRiyal * 28;
+            document.write(`Currency in PKR<br><br>
+            Total Currency in PKR: ${usdToPkr+srToPkr}<br><br>`);
+        }
+
+        // Question 10
+        function qTen() {
+            let num = 2;
+            num = num + 5;
+            num = num * 10;
+            num = num / 2;
+            document.write(`Final result is ${num}<br><br><a href="./chapter5-6.html"><button>Back</button></a>`);
+        }
+
+
+        // Question 11
+        function qEleven() {
+            let currentYear = 2022 //currentYear.getFullYear();
+            let birthYear = prompt(`Enter your Birth Year`);
+            document.write(`Your Age is : ${currentYear-birthYear}<br><br><a href="./chapter5-6.html"><button>Back</button></a>`);
+
+        }
+
+
+        // Question 12
+        function qTwelve() {
+            let radius = prompt(`Enter value of Radius`);
+            let circumference = 2 * 3.142 * radius;
+            let area = 3.142 * radius * radius;
+            document.write(`Radius of a circle is : ${radius}<br>
+        The circumference is : ${circumference}<br>
+        The area is : ${area}<br>
+        <br><br><a href="./chapter5-6.html"><button>Back</button></a>`);
+        }
+
+
+        // Question 13
+        function qThirteen() {
+            let favSnack = prompt(`Enter your favorite snacks`);
+            let currentAge = prompt(`Enter your age`);
+            let maxAge = 65;
+            let estimatedAmountOfSnacks = 3;
+            let calcAge = (65 - (Number(currentAge)));
+            let calcAgeDays = 365 * calcAge;
+            let lifeTimeSnacks = calcAgeDays * estimatedAmountOfSnacks;
+            document.write(`Favorite Snack : ${favSnack}<br>
+            Current age : ${currentAge}<br>
+            Estimated Maximum Age : 65<br>
+            Amount of snacks per day : ${estimatedAmountOfSnacks}<br>
+            You will need ${lifeTimeSnacks} ${favSnack} to last you until the ripe old age of 65
+            <br><br><a href="./chapter5-6.html"><button>Back</button></a>`);
+
+        }
     </script>
 </body>
 

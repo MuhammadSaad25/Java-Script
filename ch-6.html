@@ -29,95 +29,162 @@
         <br>
         <br>
 
+    </div>
+    <button onclick="Qfive()"> Click for marksheet</button></button>
+    <script>
+        let inputElement = document.querySelector("#user-name");
+        let h2Element = document.querySelector("#greet-user");
+
+        function register() {
+            h2Element.innerHTML = "Welcome Mr. " + inputElement.value;
+        }
 
 
-        <script>
-            let inputElement = document.querySelector("#user-name");
-            let h2Element = document.querySelector("#greet-user");
+        function addNumbers() {
+            let number;
+            let result = "";
+            let num2 = 5;
 
-            function register() {
-                h2Element.innerHTML = "Welcome Mr. " + inputElement.value;
-            }
-
-
-            function addNumbers() {
-                let number;
-                let result = "";
-                let num2 = 5;
-
-                number = Number(document.getElementById("number").value);
+            number = Number(document.getElementById("number").value);
 
 
 
-                if (number == 0) {
+            if (number == 0) {
 
-                    for (let i = 1; i <= 10; i++) {
-                        result = result + " <p> " + num2 + " x " + i + " = " + num2 * i + " </p> ";
-                    }
-                } else {
-                    for (let i = 1; i <= 10; i++) {
-                        result = result + " <p> " + number + " x " + i + " = " + number * i + " </p> ";
-                    }
+                for (let i = 1; i <= 10; i++) {
+                    result = result + " <p> " + num2 + " x " + i + " = " + num2 * i + " </p> ";
                 }
-
-
-
-                document.getElementById("result").innerHTML = result;
+            } else {
+                for (let i = 1; i <= 10; i++) {
+                    result = result + " <p> " + number + " x " + i + " = " + number * i + " </p> ";
+                }
             }
 
 
 
-
-            // for (let i = 1; i <= 10; i++) {
-            //     document.write("<br>");
-            //     document.write(5 + " X " + i + " = " + 5 * i);
-            // }
-
-            // var mainTable = document.querySelector("#table");
-
-            // function printTable() {
-            //     document.write("Table of " + mainTable.value);
-            //     for (let i = 1; i <= 10; i++) {
-            //         document.write("<br>");
-            //         document.write(mainTable.value + " X " + i + " = " + mainTable.value * i);
-            //     }
-            // }
+            document.getElementById("result").innerHTML = result;
+        }
 
 
 
 
+        // for (let i = 1; i <= 10; i++) {
+        //     document.write("<br>");
+        //     document.write(5 + " X " + i + " = " + 5 * i);
+        // }
 
-            document.write('<br> <br>' + '<b>result</b>' + '<br>');
-            let a = 10;
+        // var mainTable = document.querySelector("#table");
 
-            document.write("the value of a is " + a + '<br> <br> ')
+        // function printTable() {
+        //     document.write("Table of " + mainTable.value);
+        //     for (let i = 1; i <= 10; i++) {
+        //         document.write("<br>");
+        //         document.write(mainTable.value + " X " + i + " = " + mainTable.value * i);
+        //     }
+        // }
 
-            document.write("the value of ++a is " + ++a + '<br>')
-            document.write("Now the value of a is " + a + '<br> <br>')
 
-            document.write("the value of a++ is " + a++ + '<br>')
-            document.write("Now the value of a is " + a + '<br> <br>')
 
-            document.write("the value of --a is " + --a + '<br>')
-            document.write("Now the value of a is " + a + '<br> <br>')
 
-            document.write("the value of a-- is " + a-- + '<br>')
-            document.write("Now the value of a is " + a + '<br> <br>')
 
-            let c = 2,
-                d = 1;
-            document.write("c = " + c + '<br>');
-            document.write("d = " + d + '<br>');
+        document.write('<br> <br>' + '<b>result</b>' + '<br>');
+        let a = 10;
 
-            let result = --c - --d + ++d + d--;
+        document.write("the value of a is " + a + '<br> <br> ')
 
-            document.write("result = " + result + '<br>');
+        document.write("the value of ++a is " + ++a + '<br>')
+        document.write("Now the value of a is " + a + '<br> <br>')
 
-            document.write("--c = " + --c + '<br>');
-            document.write("--c - --d = " + (--c - --d) + '<br>');
-            document.write("--c - --d + ++d = " + (--c - --d + ++d) + '<br>');
-            document.write("--c - --d + ++d + d-- = " + (--c - --d + ++d + d--) + '<br>');
-        </script>
+        document.write("the value of a++ is " + a++ + '<br>')
+        document.write("Now the value of a is " + a + '<br> <br>')
+
+        document.write("the value of --a is " + --a + '<br>')
+        document.write("Now the value of a is " + a + '<br> <br>')
+
+        document.write("the value of a-- is " + a-- + '<br>')
+        document.write("Now the value of a is " + a + '<br> <br>')
+
+        let c = 2,
+            d = 1;
+        document.write("c = " + c + '<br>');
+        document.write("d = " + d + '<br>');
+
+        let result = --c - --d + ++d + d--;
+
+        document.write("result = " + result + '<br>');
+
+        document.write("--c = " + --c + '<br>');
+        document.write("--c - --d = " + (--c - --d) + '<br>');
+        document.write("--c - --d + ++d = " + (--c - --d + ++d) + '<br>');
+        document.write("--c - --d + ++d + d-- = " + (--c - --d + ++d + d--) + '<br>');
+
+        // Question 5
+        function Qfive() {
+            let sub1 = prompt(`Please enter subject 1 name`);
+            let sub1Marks = prompt(`Please enter ${sub1} obtained marks`);
+            let sub2 = prompt(`Please enter subject 2 name`);
+            let sub2Marks = prompt(`Please enter ${sub2} obtained marks`);
+            let sub3 = prompt(`Please enter subject 3 name`);
+            let sub3Marks = prompt(`Please enter ${sub3} obtained marks`);
+
+            let sub1MarksTotal = 100;
+            let sub2MarksTotal = 100;
+            let sub3MarksTotal = 100;
+
+            let sub1MarksPerc = sub1Marks / sub1MarksTotal * 100;
+            let sub2MarksPerc = sub2Marks / sub2MarksTotal * 100;
+            let sub3MarksPerc = sub3Marks / sub3MarksTotal * 100;
+
+            let totalMarks = sub1MarksTotal + sub2MarksTotal + sub3MarksTotal;
+            let totalObtained = (Number(sub1Marks) + (Number(sub2Marks)) + (Number(sub3Marks)));
+            let finalPerc = totalObtained / totalMarks * 100;
+            nfinalPerc = finalPerc.toFixed(2);
+            nfinalPerc = parseFloat(nfinalPerc);
+
+            document.write(`
+            <table>
+  <tr>
+    <th>Subject</th>
+    <th>Total Marks</th>
+    <th>Obtained Marks</th>
+    <th>Percentage</th>
+  </tr>
+  <tr>
+    <td>${sub1}</td>
+    <td>${sub1MarksTotal}</td>
+    <td>${sub1Marks}</td>
+    <td>${sub1MarksPerc}%</td>
+  </tr>
+  <tr>
+    <td>${sub2}</td>
+    <td>${sub2MarksTotal}</td>
+    <td>${sub2Marks}</td>
+    <td>${sub2MarksPerc}%</td>
+  </tr>
+  <tr>
+    <td>${sub3}</td>
+    <td>${sub3MarksTotal}</td>
+    <td>${sub3Marks}</td>
+    <td>${sub3MarksPerc}%</td>
+  </tr>
+  
+  <tr>
+    <td></td>
+    <td>-----</td>
+    <td>-----</td>
+    <td>-----</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>${totalMarks}</td>
+    <td>${totalObtained}</td>
+    <td>${nfinalPerc}%</td>
+  </tr>
+  </table>
+  <br><br><a href="./chapter9.html"><button>Back</button></a>`);
+
+        }
+    </script>
 
 
 </body>
