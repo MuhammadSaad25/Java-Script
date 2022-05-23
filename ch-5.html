@@ -6,34 +6,145 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="./ch-5 style.css">
 </head>
 
 <body>
+    <div class="main-container">
+        <div class="container">
+
+            <div class="box">
+                <h1>Purchase Tickets For Movie</h1>
+                <h3 class="heading 2">Per Ticket Price is 600</h3>
+            </div>
+
+
+            <div class="box1">
+                <b style="font-size: 20px;"> Select Movie </b>
+                <input class="movie-name1" type="radio" name="movie" value="Karachi Se Lahore" required><b>Karachi Se Lahore</b>
+                <br>
+                <b style="font-size: 20px;"> Select Show Timing </b>
+                <input class="movie-timing" type="radio" name="12pm To 3pm" value="Timing"><b>12pm To 3pm</b>
+                <br>
+
+                <b style="font-size: 20px;"> Select No Of Tickets </b>
+                <input class="ticket-value" type="number" placeholder="Select number of tickets" title="Select number of tickets " required>
+                <br>
+
+                <div class="box1-subbox">
+                    <button onclick="submit()">Buy</button>
+                </div>
+            </div>
+
+            <div class="box2">
+                <h1 id="finalmsg"></h1>
+            </div>
+
+        </div>
+    </div>
+
+    <h2>Temperature Converter</h2>
+    <p>Type a value in the Fahrenheit field to convert the value to Celsius:</p>
+
+    <p>
+        <label>Fahrenheit</label>
+        <input id="inputFahrenheit" type="number" placeholder="Fahrenheit" oninput="temperatureConverter(this.value)" onchange="temperatureConverter(this.value)">
+    </p>
+    <p>Celcius: <span id="outputCelcius"></span></p>
+    <!-- 
+    <p>Type a value in the Celsius field to convert the value to Fahrenheit:</p>
+
+    <p>
+        <label>Celsius</label>
+        <input id="inputCelsius" type="number" placeholder="Celsius" oninput="temperatureConverter(this.value)" onchange="temperatureConverter(this.value)">
+    </p>
+    <p>Fahrenheit: <span id="outputFahrenheit"></span></p> -->
+
+
+
+    <br> <br> <br> <br>
+
     <script>
-        let a = 3;
-        let b = 5;
-        let result = a + b;
-        alert("Sum of " + a + " and " + b + " is " + result);
+        function submit() {
 
-        let a1 = 3;
-        let b1 = 5;
-        let result1 = a - b;
-        alert("Subtraction of " + a + " and " + b + " is " + result1);
+            let ticketQuantity = document.querySelector('.ticket-value').value;
+            // console.log("ticketQuantity", ticketQuantity)
 
-        let a2 = 3;
-        let b2 = 5;
-        let result2 = a * b;
-        alert("multiplication of " + a + " and " + b + " is " + result2);
+            let ticketPrice = 600;
 
-        let a3 = 3;
-        let b3 = 5;
-        let result3 = a / b;
-        alert("division of " + a + " and " + b + " is " + result3);
+            let result = ticketQuantity * ticketPrice;
+            // console.log("result", "Total cost to buy " + ticketQuantity + " tickets to a movie is" + result);
 
-        let a4 = 3;
-        let b5 = 5;
-        let result4 = a % b;
-        alert("modulus of " + a + " and " + b + " is " + result4);
+            let finalmsgElement = document.querySelector('#finalmsg');
+            finalmsgElement.innerHTML = "Total cost to buy " + ticketQuantity + " tickets to a movie is " + result + '<br>' + '<h1>Thanks For Bocking</h1>';
+
+        }
+
+
+        function temperatureConverter(valNum) {
+            valNum = parseFloat(valNum);
+            document.getElementById("outputCelcius").innerHTML = (valNum - 32) / 1.8;
+        }
+
+        // function temperatureConverter(valNum1) {
+        //     valNum = parseFloat(valNum1);
+        //     document.getElementById("outputFahrenheit").innerHTML = (valNum1 * 1.8) + 32;
+        // }
+
+
+
+        // let a = 3;
+        // let b = 5;
+        // let result = a + b;
+        // alert("Sum of " + a + " and " + b + " is " + result);
+
+        // let a1 = 3;
+        // let b1 = 5;
+        // let result1 = a - b;
+        // alert("Subtraction of " + a + " and " + b + " is " + result1);
+
+        // let a2 = 3;
+        // let b2 = 5;
+        // let result2 = a * b;
+        // alert("multiplication of " + a + " and " + b + " is " + result2);
+
+        // let a3 = 3;
+        // let b3 = 5;
+        // let result3 = a / b;
+        // alert("division of " + a + " and " + b + " is " + result3);
+
+        // let a4 = 3;
+        // let b5 = 5;
+        // let result4 = a % b;
+        // alert("modulus of " + a + " and " + b + " is " + result4);
+
+        let declareVariable = "";
+
+        document.write("declareVariable ", declareVariable + "<br>");
+
+        declareVariable = 5;
+        document.write("Initialize Value " + declareVariable + "<br>");
+
+        document.write("Value After Increment the variable " + ++declareVariable + "<br>");
+
+        let b = Number(7);
+        document.write("Value After Addtion 7 " + (declareVariable + b) + "<br>");
+
+
+        --declareVariable;
+
+        document.write("Value After Decriment " + (declareVariable + b) + "<br>");
+
+        document.write("The remainder is :  " + ((declareVariable + b) % 3) + "<br>");
+
+        let a = +prompt("Enter your desire tabel number :")
+        document.write("<h1>Table of</h1>", `<h1>${a}</h1>`)
+        for (let i = 1; i <= 10; i++) {
+            let c = a * i;
+            console.log(`${a} x ${i} = ${c}`);
+            document.write(`${a} x ${i} = ${c}`);
+            document.write("<br>");
+        }
     </script>
 </body>
 
