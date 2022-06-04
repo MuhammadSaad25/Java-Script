@@ -13,14 +13,15 @@
     <!-- 1. Write a program to take “city” name as input from user. If
    user enters “Karachi”, welcome the user like this:
     “Welcome to city of lights” -->
+<form onclick="submit()"></form>
 
-    <form onsubmit="submit () ; return false">
-        <h1>Q No 1</h1>
-        <label for="text"></label>
-        <input type="text" id="city">
-        <button type="sumbit">OK</button>
-    </form>
+    <h1>Q No 1</h1>
+    <label for="text">Type City Name Hare </label>
+    <input type="text" id="city">
 
+    <button onclick="submit()">Check</button>
+
+    <h1 id="sumResult"> </h1>
 </body>
 
 </html>
