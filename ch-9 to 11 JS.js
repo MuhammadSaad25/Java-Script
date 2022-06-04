@@ -5,9 +5,6 @@
 function checkCity() {
 
     let input1 = document.querySelector('#city').value;
-    console.log("input1", input1);
-
-    // let cityName = "karachi";
 
     let result = "";
 
@@ -16,8 +13,6 @@ function checkCity() {
     }else {
         result = "One Of the city of Pakistan"
     }
-
-    console.log("result", result);
 
     let ResultElement = document.querySelector('#Result');
 
@@ -29,26 +24,32 @@ function checkCity() {
 //     user is male, give the message: Good Morning Sir. If the
 //     user is female, give the message: Good Morning Ma’am. -->
  
-function checkCity() {
+function checkGander() {
 
-    let input1 = document.querySelector('#city').value;
-    console.log("input1", input1);
+    let input2 = document.querySelector('#Gander').value;
 
-    // let cityName = "karachi";
+    console.log(input2)
 
-    let result = "";
+    let result1 = "";
 
-    if (input1 == "karachi" || input1 == "Karachi" || input1 == "Khi" || input1 == "khi" ) {
-        result = "Welcome to city of lights";
+    if (input2 == "Male" || input2 == "male") {
+        result1 = "Good Morniing Sir";
+    }else if(input2 == "Female" || input2 == "female"){
+        result1 = "Good Morning Ma'am"
     }else {
-        result = "One Of the city of Pakistan"
+        result1 = "Please Type Your Gender"
     }
 
-    console.log("result", result);
+    let Result1Element = document.querySelector('#Result1');
 
-    let ResultElement = document.querySelector('#Result');
-
-    ResultElement.innerText = result;
+    Result1Element.innerText = result1;
 
 }
+
+// <!-- 3. Write a program to take input color of road traffic signal
+//     from the user & show the message according to this table:
+//     Signal color Message
+//     Red Must Stop
+//     Yellow Ready to move
+//     Green Move now -->
 
