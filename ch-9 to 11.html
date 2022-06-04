@@ -13,15 +13,29 @@
     <!-- 1. Write a program to take “city” name as input from user. If
    user enters “Karachi”, welcome the user like this:
     “Welcome to city of lights” -->
-<form onclick="submit()"></form>
+    <form onsubmit="checkCity() ; return false">
 
-    <h1>Q No 1</h1>
-    <label for="text">Type City Name Hare </label>
-    <input type="text" id="city">
+        <h1>Q No 1</h1>
+        <label for="text">Type City Name Hare </label>
+        <input required type="text" id="city">
 
-    <button onclick="submit()">Check</button>
+        <button type="submit">Check</button>
+        <h1 id="Result"> </h1>
+    </form>
+    
+    <!-- 2. Write a program to take “gender” as input from user. If the
+    user is male, give the message: Good Morning Sir. If the
+    user is female, give the message: Good Morning Ma’am. -->
+    <form onsubmit="checkGander() ; return false">
 
-    <h1 id="sumResult"> </h1>
+        <h1>Q No 2</h1>
+        <label for="text">Type Your Gander Hare </label>
+        <input required type="text" id="Gander">
+
+        <button type="submit">Check</button>
+        <h1 id="Result1"> </h1>
+    </form>
+    
 </body>
 
 </html>
