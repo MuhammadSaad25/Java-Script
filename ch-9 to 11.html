@@ -99,45 +99,54 @@
             <div class="mark_sheet_left">
                 <h1>Subject Name</h1>
                 <label for="text">Subject 1
-                    <input required type="text" id="color1" placeholder="Red">
+                    <input required type="text" id="subName1" placeholder="English">
                 </label>
                 <label for="text">Subject 2
-                    <input required type="text" id="color2" placeholder="Yellow">
+                    <input required type="text" id="subName2" placeholder="Maths">
                 </label>
                 <label for="text">Subject 3
-                    <input required type="text" id="color3" placeholder="Green">
+                    <input required type="text" id="subName3" placeholder="Urdu">
                 </label>
             </div>
 
             <div class="mark_sheet_mid">
                 <h1>Type Total Marks Hare</h1>
                 <label for="text">Total Marks
-                    <input required type="text" id="color1" placeholder="Red">
+                    <input required type="number" id="totalMarks1" placeholder="100">
                 </label>
                 <label for="text">Total Marks
-                    <input required type="text" id="color2" placeholder="Yellow">
+                    <input required type="number" id="totalMarks2" placeholder="100">
                 </label>
                 <label for="text">Total Marks
-                    <input required type="text" id="color3" placeholder="Green">
+                    <input required type="number" id="totalMarks3" placeholder="100">
                 </label>
             </div>
 
             <div class="mark_sheet_right">
                 <h1>Type Obtain Marks Hare</h1>
                 <label for="text">Marks Obtain
-                    <input required type="text" id="color1" placeholder="Red">
+                    <input required type="number" id="obtainMarks1" placeholder="85">
                 </label>
                 <label for="text">Marks Obtain
-                    <input required type="text" id="color2" placeholder="Yellow">
+                    <input required type="text" id="obtainMarks2" placeholder="85">
                 </label>
                 <label for="text">Marks Obtain
-                    <input required type="text" id="color3" placeholder="Green">
+                    <input required type="text" id="obtainMarks3" placeholder="85">
                 </label>
             </div>
 
         </div>
-        <h1 id="erorHeading"></h1>
         <button type="submit" class="submit">Check</button>
+    
+        <div class="container2">
+        <h1>Mark Sheet</h1>
+        <h1 id="showTotalMarks"></h1>
+        <h1 id="showObtainMarks"></h1>
+        <h1 id="showPercent"></h1>
+        <h1 id="showGrade"></h1>
+        <h1 id="showRemarks"></h1>
+    </div>
+    
     </form>
 
 </body>

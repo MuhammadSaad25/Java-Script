@@ -201,79 +201,93 @@ function checkFuel() {
 // grade as per following table: -->
 
 
-function checkColorMean() {
+function markSheet() {
 
-    let colorInput1 = document.querySelector('#color1').value;
-    let colorInput2 = document.querySelector('#color2').value;
-    let colorInput3 = document.querySelector('#color3').value;
+    let subName1 = document.querySelector('#subName1').value;
+    let subName2 = document.querySelector('#subName2').value;
+    let subName3 = document.querySelector('#subName3').value;
 
-    console.log(colorInput1, colorInput2, colorInput3);
+    let totalMarks1 = document.querySelector('#totalMarks1').value;
+    let totalMarks2 = document.querySelector('#totalMarks2').value;
+    let totalMarks3 = document.querySelector('#totalMarks3').value;
+
+    totalMarks1 = Number(totalMarks1)
+    totalMarks2 = Number(totalMarks2)
+    totalMarks3 = Number(totalMarks3)
+
+    let obtainMarks1 = document.querySelector('#obtainMarks1').value;
+    let obtainMarks2 = document.querySelector('#obtainMarks2').value;
+    let obtainMarks3 = document.querySelector('#obtainMarks3').value;
+
+    obtainMarks1 = Number(obtainMarks1);
+    obtainMarks2 = Number(obtainMarks2);
+    obtainMarks3 = Number(obtainMarks3);
+
+    let totalMarks = (totalMarks1 + totalMarks2 + totalMarks3);
+    let obtainMarks = (obtainMarks1 + obtainMarks2 + obtainMarks3);
+    let percent = ((obtainMarks / totalMarks) * 100);
+    let result = "";
+    let result2 = "";
+    
+    totalMarks = Number(totalMarks);
+    obtainMarks = Number(obtainMarks);
+    percent = Number(percent);
 
 
+    if (percent < 60) {
+        result = "Fail"
 
-    let msg1 = "";
-    let msg2 = "";
-    let msg3 = "";
-    let erorHeading = "";
+    } else if (percent > 59 && percent < 70) {
+        result = "B"
 
-    if (colorInput1 == "Red" || colorInput1 == "red") {
-        msg1 = "Red Must Stop";
-
-    } else if (colorInput1 == "Yellow" || colorInput1 == "yellow") {
-        msg1 = "Yellow Ready to move";
-
-    } else if (colorInput1 == "Green" || colorInput1 == "green") {
-        msg1 = "Green Move now";
-
-    } else if (colorInput1 != "Red" || colorInput1 != "red") {
-        msg1 = "Error ! Please fill correct color name";
-
-    }
-
-    if (colorInput2 == "Red" || colorInput2 == "red") {
-        msg2 = "Red Must Stop";
-
-    } else if (colorInput2 == "Yellow" || colorInput2 == "yellow") {
-        msg2 = "Yellow Ready to move";
-
-    } else if (colorInput2 == "Green" || colorInput2 == "green") {
-        msg2 = "Green Move now";
-
-    } else if (colorInput2 != "Red" || colorInput2 != "red") {
-        msg2 = "Error ! Please fill correct color name";
-
-    }
-
-    if (colorInput3 == "Red" || colorInput3 == "red") {
-        msg3 = "Red Must Stop";
-
-    } else if (colorInput3 == "Yellow" || colorInput3 == "yellow") {
-        msg3 = "Yellow Ready to move";
-
-    } else if (colorInput3 == "Green" || colorInput3 == "green") {
-        msg3 = "Green Move now";
-
-    } else if (colorInput3 != "Red" || colorInput3 != "red") {
-        msg3 = "Error ! Please fill correct color name";
+    } else if (percent > 69 && percent < 80) {
+        result = "A"
 
     } else {
-        erorHeading = "Please Fill Creack Colour Name In Above Three Empaty Colums "
+        result = "A1"
     }
 
-    let msg1Element = document.querySelector('#msg1');
+    
+    if (percent < 60) {
+        result2 = "Sorry"
 
-    msg1Element.innerText = msg1;
+    } else if (percent > 59 && percent < 70) {
+        result2 = "You Need To Improve"
 
-    let msg2Element = document.querySelector('#msg2');
+    } else if (percent > 69 && percent < 80) {
+        result2 = "Good"
 
-    msg2Element.innerText = msg2;
+    } else {
+        result2 = "Excellent"
+    }
 
-    let msg3Element = document.querySelector('#msg3');
+    
 
-    msg3Element.innerText = msg3;
+    let showTotalMarks = "Total Marks : " + totalMarks;
+    let showObtainMarks = "Obtained Marks : " + obtainMarks;
+    let showPercent =  `Percentage : ${percent} %`;
+    let showGrade = `Grade :  ${result}`;
+    let showRemarks = `Remarks : ${result2}`;
 
-    let erorHeadingElement = document.querySelector('#erorHeading');
+    let showTotalMarksElement = document.querySelector('#showTotalMarks');
 
-    erorHeadingElement.innerText = erorHeading;
+    showTotalMarksElement.innerText = showTotalMarks;
 
-}
+    let showObtainMarksElement = document.querySelector('#showObtainMarks');
+
+    showObtainMarksElement.innerText = showObtainMarks;
+
+    let showPercentElement = document.querySelector('#showPercent');
+
+    showPercentElement.innerText = showPercent;
+    
+    let showGradeElement = document.querySelector('#showGrade');
+
+    showGradeElement.innerText = showGrade;
+
+    let showRemarksElement = document.querySelector('#showRemarks');
+
+    showRemarksElement.innerText = showRemarks;
+
+
+    }
