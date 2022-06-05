@@ -48,7 +48,7 @@
     <h1>Q no 3</h1>
     <form onsubmit="checkColorMean(); return false">
         <div class="container">
-            
+
             <div class="left_div">
                 <h1>Signal Colour</h1>
                 <label for="text">Colour Name
@@ -61,20 +61,30 @@
                     <input required type="text" id="color3" placeholder="Green">
                 </label>
             </div>
-            
+
             <div class="right_div">
                 <h1>Message</h1>
                 <h2 id="msg1"></h2>
                 <h2 id="msg2"></h2>
                 <h2 id="msg3"></h2>
             </div>
-        
+
         </div>
         <h1 id="erorHeading"></h1>
         <button type="submit" class="check">Check</button>
     </form>
+    <!-- 4. Write a program to take input remaining fuel in car (in
+    litres) from user. If the current fuel is less than 0.25litres,
+    show the message “Please refill the fuel in your car” -->
 
-
+    <h1>Q no 4</h1>
+    <form onsubmit="checkFuel(); return false">
+        <label for="number">
+            <input type="number" id="fuelInput">
+        </label>
+        <h1 id="fuelResult"></h1>
+        <button type="submit">Check</button>
+    </form>
 
 </body>
 
