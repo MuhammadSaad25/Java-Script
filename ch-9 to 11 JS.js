@@ -53,25 +53,48 @@ function checkGander() {
 //     Yellow Ready to move
 //     Green Move now -->
 
-function checkGander() {
+function checkColorMean() {
 
-    let input2 = document.querySelector('#Gander').value;
+    let colorInput1 = document.querySelector('#color1').value;
+    let colorInput2 = document.querySelector('#color2').value;
+    let colorInput3 = document.querySelector('#color3').value;
 
-    console.log(input2)
+    console.log(colorInput1 , colorInput2 ,colorInput3); 
 
-    let result1 = "";
+    
 
-    if (input2 == "Male" || input2 == "male") {
-        result1 = "Good Morniing Sir";
-    }else if(input2 == "Female" || input2 == "female"){
-        result1 = "Good Morning Ma'am"
+    let msg1 = "";
+    let msg2 = "";
+    let msg3 = "";
+    let erorHeading = "";
+
+    if (colorInput1 == "Red" || colorInput1 == "red") {
+        msg1 = "Red Must Stop";
+    }
+    if(colorInput2 == "Yellow" || colorInput2 == "yellow"){
+        msg2 = "Yellow Ready to move"
+    }
+    if(colorInput3 == "Green" || colorInput3 == "green"){
+        msg3 = "Green Move now"
     }else {
-        result1 = "Please Type Your Gender"
+        erorHeading = "Please Fill Like This 1.Red 2.Yellow 3.Green"
     }
 
-    let Result1Element = document.querySelector('#Result1');
+    let msg1Element = document.querySelector('#msg1');
 
-    Result1Element.innerText = result1;
+    msg1Element.innerText = msg1;
+    
+    let msg2Element = document.querySelector('#msg2');
+
+    msg2Element.innerText = msg2;
+    
+    let msg3Element = document.querySelector('#msg3');
+
+    msg3Element.innerText = msg3;
+    
+    let erorHeadingElement = document.querySelector('#erorHeading');
+
+    erorHeadingElement.innerText = erorHeading;
 
 }
 

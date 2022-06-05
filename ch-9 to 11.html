@@ -36,7 +36,7 @@
         <button type="submit">Check</button>
         <h1 id="Result1"> </h1>
     </form>
-    <br> 
+    <br>
 
     <!-- 3. Write a program to take input color of road traffic signal
     from the user & show the message according to this table:
@@ -46,27 +46,31 @@
     Green Move now -->
 
     <h1>Q no 3</h1>
-    <form onsubmit="checkColorMean">
+    <form onsubmit="checkColorMean(); return false">
         <div class="container">
+            
             <div class="left_div">
                 <h1>Signal Colour</h1>
                 <label for="text">Colour Name
-                    <input type="text" id="color1">
+                    <input required type="text" id="color1" placeholder="Red">
                 </label>
                 <label for="text">Colour Name
-                    <input type="text" id="color2">
+                    <input required type="text" id="color2" placeholder="Yellow">
                 </label>
                 <label for="text">Colour Name
-                    <input type="text" id="color3">
+                    <input required type="text" id="color3" placeholder="Green">
                 </label>
             </div>
+            
             <div class="right_div">
                 <h1>Message</h1>
-                <h2 class="msg1">hi the is my msg</h2>
-                <h2 class="msg2">hi the is my msg</h2>
-                <h2 class="msg3">hi the is my msg</h2>
+                <h2 id="msg1"></h2>
+                <h2 id="msg2"></h2>
+                <h2 id="msg3"></h2>
             </div>
+        
         </div>
+        <h1 id="erorHeading"></h1>
         <button type="submit" class="check">Check</button>
     </form>
 
