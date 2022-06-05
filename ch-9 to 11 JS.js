@@ -53,3 +53,25 @@ function checkGander() {
 //     Yellow Ready to move
 //     Green Move now -->
 
+function checkGander() {
+
+    let input2 = document.querySelector('#Gander').value;
+
+    console.log(input2)
+
+    let result1 = "";
+
+    if (input2 == "Male" || input2 == "male") {
+        result1 = "Good Morniing Sir";
+    }else if(input2 == "Female" || input2 == "female"){
+        result1 = "Good Morning Ma'am"
+    }else {
+        result1 = "Please Type Your Gender"
+    }
+
+    let Result1Element = document.querySelector('#Result1');
+
+    Result1Element.innerText = result1;
+
+}
+
