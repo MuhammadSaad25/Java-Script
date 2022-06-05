@@ -86,6 +86,60 @@
         <button type="submit">Check</button>
     </form>
 
+    <!-- 6. Write a program to take input the marks obtained in three
+    subjects & total marks. Compute & show the resulting
+    percentage on your page. Take percentage & compute
+    grade as per following table: -->
+
+
+    <h1>Q no 6</h1>
+    <form onsubmit="markSheet(); return false">
+        <div class="container">
+
+            <div class="mark_sheet_left">
+                <h1>Subject Name</h1>
+                <label for="text">Subject 1
+                    <input required type="text" id="color1" placeholder="Red">
+                </label>
+                <label for="text">Subject 2
+                    <input required type="text" id="color2" placeholder="Yellow">
+                </label>
+                <label for="text">Subject 3
+                    <input required type="text" id="color3" placeholder="Green">
+                </label>
+            </div>
+
+            <div class="mark_sheet_mid">
+                <h1>Type Total Marks Hare</h1>
+                <label for="text">Total Marks
+                    <input required type="text" id="color1" placeholder="Red">
+                </label>
+                <label for="text">Total Marks
+                    <input required type="text" id="color2" placeholder="Yellow">
+                </label>
+                <label for="text">Total Marks
+                    <input required type="text" id="color3" placeholder="Green">
+                </label>
+            </div>
+
+            <div class="mark_sheet_right">
+                <h1>Type Obtain Marks Hare</h1>
+                <label for="text">Marks Obtain
+                    <input required type="text" id="color1" placeholder="Red">
+                </label>
+                <label for="text">Marks Obtain
+                    <input required type="text" id="color2" placeholder="Yellow">
+                </label>
+                <label for="text">Marks Obtain
+                    <input required type="text" id="color3" placeholder="Green">
+                </label>
+            </div>
+
+        </div>
+        <h1 id="erorHeading"></h1>
+        <button type="submit" class="submit">Check</button>
+    </form>
+
 </body>
 
 </html>

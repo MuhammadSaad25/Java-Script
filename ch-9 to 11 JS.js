@@ -141,14 +141,14 @@ function checkFuel() {
     // let fuelInput = number()
     console.log(fuelInput)
 
-    let fuelResult = "";
+    let fuelResult = 0.25;
 
-    if (fuelInput == parseFloat("0.25") ) {
-        fuelResult = "Good Morniing Sir";
-    } else {
-        fuelInput = "Please Type Your Gender"
+    if (fuelInput == 0.25) {
+        fuelResult = 'Fill your fuel';
     }
-
+    else {
+        fuelResult = 'subbbbbb';
+    }
     let fuelResultElement = document.querySelector('#fuelResult');
 
     fuelResultElement.innerText = fuelResult;
@@ -158,40 +158,122 @@ function checkFuel() {
 // 5. Run this script, & check whether alert message would be
 // displayed or not.Record the outputs.
 
-    var a = 4;
-    if (++a === 5) {
-        alert("given condition for variable a is true");
-    }
-    var b = 82;
-    if (b++ === 83) {
-        alert("given condition for variable b is true");
-    }
-    var c = 12;
-    if (c++ === 13) {
-        alert("condition 1 is true");
-    }
-    if (c === 13) {
-        alert("condition 2 is true");
-    }
-    if (++c < 14) {
-        alert("condition 3 is true");
-    }
-    if (c === 14) {
-        alert("condition 4 is true");
-    }
-    var materialCost = 20000;
-    var laborCost = 2000;
-    var totalCost = materialCost + laborCost;
-    if (totalCost === laborCost + materialCost) {
-        alert("The cost equals");
-    }
-    if (true) {
-        alert("True");
-    }
-    if (false) {
-        alert("False");
-    }
-    if ("car" < "cat") {
-        alert("car is smaller than cat");
+// let a = 4;
+// if (++a === 5) {
+//     alert("given condition for variable a is true");
+// }
+// let b = 82;
+// if (b++ === 83) {
+//     alert("given condition for variable b is true");
+// }
+// let c = 12;
+// if (c++ === 13) {
+//     alert("condition 1 is true");
+// }
+// if (c === 13) {
+//     alert("condition 2 is true");
+// }
+// if (++c < 14) {
+//     alert("condition 3 is true");
+// }
+// if (c === 14) {
+//     alert("condition 4 is true");
+// }
+// let materialCost = 20000;
+// let laborCost = 2000;
+// let totalCost = materialCost + laborCost;
+// if (totalCost === laborCost + materialCost) {
+//     alert("The cost equals");
+// }
+// if (true) {
+//     alert("True");
+// }
+// if (false) {
+//     alert("False");
+// }
+// if ("car" < "cat") {
+//     alert("car is smaller than cat");
+// }
+
+// <!-- 6. Write a program to take input the marks obtained in three
+// subjects & total marks. Compute & show the resulting
+// percentage on your page. Take percentage & compute
+// grade as per following table: -->
+
+
+function checkColorMean() {
+
+    let colorInput1 = document.querySelector('#color1').value;
+    let colorInput2 = document.querySelector('#color2').value;
+    let colorInput3 = document.querySelector('#color3').value;
+
+    console.log(colorInput1, colorInput2, colorInput3);
+
+
+
+    let msg1 = "";
+    let msg2 = "";
+    let msg3 = "";
+    let erorHeading = "";
+
+    if (colorInput1 == "Red" || colorInput1 == "red") {
+        msg1 = "Red Must Stop";
+
+    } else if (colorInput1 == "Yellow" || colorInput1 == "yellow") {
+        msg1 = "Yellow Ready to move";
+
+    } else if (colorInput1 == "Green" || colorInput1 == "green") {
+        msg1 = "Green Move now";
+
+    } else if (colorInput1 != "Red" || colorInput1 != "red") {
+        msg1 = "Error ! Please fill correct color name";
+
     }
 
+    if (colorInput2 == "Red" || colorInput2 == "red") {
+        msg2 = "Red Must Stop";
+
+    } else if (colorInput2 == "Yellow" || colorInput2 == "yellow") {
+        msg2 = "Yellow Ready to move";
+
+    } else if (colorInput2 == "Green" || colorInput2 == "green") {
+        msg2 = "Green Move now";
+
+    } else if (colorInput2 != "Red" || colorInput2 != "red") {
+        msg2 = "Error ! Please fill correct color name";
+
+    }
+
+    if (colorInput3 == "Red" || colorInput3 == "red") {
+        msg3 = "Red Must Stop";
+
+    } else if (colorInput3 == "Yellow" || colorInput3 == "yellow") {
+        msg3 = "Yellow Ready to move";
+
+    } else if (colorInput3 == "Green" || colorInput3 == "green") {
+        msg3 = "Green Move now";
+
+    } else if (colorInput3 != "Red" || colorInput3 != "red") {
+        msg3 = "Error ! Please fill correct color name";
+
+    } else {
+        erorHeading = "Please Fill Creack Colour Name In Above Three Empaty Colums "
+    }
+
+    let msg1Element = document.querySelector('#msg1');
+
+    msg1Element.innerText = msg1;
+
+    let msg2Element = document.querySelector('#msg2');
+
+    msg2Element.innerText = msg2;
+
+    let msg3Element = document.querySelector('#msg3');
+
+    msg3Element.innerText = msg3;
+
+    let erorHeadingElement = document.querySelector('#erorHeading');
+
+    erorHeadingElement.innerText = erorHeading;
+
+}
