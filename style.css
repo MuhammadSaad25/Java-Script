@@ -65,9 +65,9 @@ a {
 }
 
 .ch_box {
-    margin: 5px 20px 100px 180px;
-    height: 90px;
-    width: 96%;
+    margin: 5px 20px 50px 120px;
+    height: 80px;
+    width: 80%;
     border-radius: 30px;
     background-color: rgb(221, 221, 221);
     box-shadow: 0px 0px 5px 3px rgba(0, 0, 0, 0.5);
@@ -76,8 +76,8 @@ a {
 }
 
 .ch_box:hover {
-    height: 100px;
-    width: 99%;
+    height: 90px;
+    width: 90%;
     background-color: rgb(210, 210, 210);
     font-size: 20px;
 }
@@ -93,9 +93,9 @@ a {
 }
 
 .ch_box2 {
-    margin: 105px 20px 0px 20px;
-    height: 90px;
-    width: 96%;
+    margin: 5px 20px 50px 50px;
+    height: 80px;
+    width: 80%;
     border-radius: 30px;
     background-color: rgb(221, 221, 221);
     box-shadow: 0px 0px 5px 3px rgba(0, 0, 0, 0.5);
@@ -104,8 +104,8 @@ a {
 }
 
 .ch_box2:hover {
-    height: 100px;
-    width: 99%;
+    height: 90px;
+    width: 90%;
     background-color: rgb(210, 210, 210);
     font-size: 20px;
 }
