@@ -54,3 +54,40 @@
 #erorHeading{
     margin-left: 450px;
 }
+
+.mark_sheet_left label{
+    margin: 15px 0 15px 0px;
+    width: 100%;
+    font-size: 32px;
+     font-weight: 500;
+}
+
+.mark_sheet_mid label{
+    margin: 15px 0 15px 0px;
+    width: 100%;
+    font-size: 32px;
+     font-weight: 500;
+}
+
+.mark_sheet_right label{
+    margin: 15px 0 15px 0px;
+    width: 100%;
+    font-size: 32px;
+     font-weight: 500;
+}
+
+.submit{
+    border: 5px solid black;
+    margin-left:600px;
+    font-weight: bold;
+    font-size:16px ;
+    height: 50px;
+    width: 100px;
+    border-radius: 30px;
+    /* border-color:red yellow green ; */
+}
+
+.check:hover{
+    height: 55px;
+    width: 105px;
+}
