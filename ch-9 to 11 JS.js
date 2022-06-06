@@ -141,13 +141,13 @@ function checkFuel() {
     // let fuelInput = number()
     console.log(fuelInput)
 
-    let fuelResult = 0.25;
+    let fuelResult = "";
 
-    if (fuelInput == 0.25) {
+    if (fuelInput < 0.25) {
         fuelResult = 'Fill your fuel';
     }
     else {
-        fuelResult = `Your Fuel Is upto ${fuelResult} liters`;
+        fuelResult = `Your Fuel Is upto  liters`;
     }
     let fuelResultElement = document.querySelector('#fuelResult');
 
