@@ -299,3 +299,14 @@ function markSheet() {
     // answer”.
     // b. If the guessed number +1 is the secret number, show
     // “Close enough to the correct answer”.
+
+
+    let value = prompt('Gusss the number')
+
+    if(value <= 10){
+        alert('Bingo! Correct answer')
+    }else if(value <=10 + 1){
+        alert('Close enough to the correct answer')
+    }else{
+        alert('Bater Luck Next Time')
+    }
