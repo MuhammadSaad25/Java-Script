@@ -147,7 +147,7 @@ function checkFuel() {
         fuelResult = 'Fill your fuel';
     }
     else {
-        fuelResult = 'subbbbbb';
+        fuelResult = `Your Fuel Is upto ${fuelResult} liters`;
     }
     let fuelResultElement = document.querySelector('#fuelResult');
 
