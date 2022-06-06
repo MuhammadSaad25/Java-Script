@@ -228,7 +228,7 @@ function markSheet() {
     let percent = ((obtainMarks / totalMarks) * 100);
     let result = "";
     let result2 = "";
-    
+
     totalMarks = Number(totalMarks);
     obtainMarks = Number(obtainMarks);
     percent = Number(percent);
@@ -247,7 +247,7 @@ function markSheet() {
         result = "A1"
     }
 
-    
+
     if (percent < 60) {
         result2 = "Sorry"
 
@@ -261,11 +261,11 @@ function markSheet() {
         result2 = "Excellent"
     }
 
-    
+
 
     let showTotalMarks = "Total Marks : " + totalMarks;
     let showObtainMarks = "Obtained Marks : " + obtainMarks;
-    let showPercent =  `Percentage : ${percent} %`;
+    let showPercent = `Percentage : ${percent} %`;
     let showGrade = `Grade :  ${result}`;
     let showRemarks = `Remarks : ${result2}`;
 
@@ -280,7 +280,7 @@ function markSheet() {
     let showPercentElement = document.querySelector('#showPercent');
 
     showPercentElement.innerText = showPercent;
-    
+
     let showGradeElement = document.querySelector('#showGrade');
 
     showGradeElement.innerText = showGrade;
@@ -290,23 +290,62 @@ function markSheet() {
     showRemarksElement.innerText = showRemarks;
 
 
-    }
+}
 
-    // 7. Guess game:
-    // Store a secret number (ranging from 1 to 10) in a variable.
-    // Prompt user to guess the secret number.
-    // a. If user guesses the same number, show “Bingo! Correct
-    // answer”.
-    // b. If the guessed number +1 is the secret number, show
-    // “Close enough to the correct answer”.
+// 7. Guess game:
+// Store a secret number (ranging from 1 to 10) in a variable.
+// Prompt user to guess the secret number.
+// a. If user guesses the same number, show “Bingo! Correct
+// answer”.
+// b. If the guessed number +1 is the secret number, show
+// “Close enough to the correct answer”.
 
 
-    let value = prompt('Gusss the number')
+let value = prompt('Gusss the number')
 
-    if(value <= 10){
-        alert('Bingo! Correct answer')
-    }else if(value <=10 + 1){
-        alert('Close enough to the correct answer')
-    }else{
-        alert('Bater Luck Next Time')
-    }
+if (value <= 10) {
+    alert('Bingo! Correct answer')
+} else if (value <= 10 + 1) {
+    alert('Close enough to the correct answer')
+} else {
+    alert('Bater Luck Next Time')
+}
+
+//    8. Write a program to check whether the given number is
+//     divisible by 3. Show the message to the user if the number
+//     is divisible by 3.
+
+// let value2 = prompt('Gusss the number')
+// if (value2 / 3)
+//     alert(value2 + " is an Even Number");
+// else
+//     alert(value2 + " is an Odd Number");
+
+
+// 9. Write a program that checks whether the given input is an
+// even number or an odd number.
+
+let value1 = prompt('Gusss the number')
+if (value1 % 2 == 0)
+    alert(value1 + " is an Even Number");
+else
+    alert(value1 + " is an Odd Number");
+
+
+    // 10. Write a program that takes temperature as input and
+    // shows a message based on following criteria
+    // a. T > 40 then “It is too hot outside.”
+    // b. T > 30 then “The Weather today is Normal.”
+    // c. T > 20 then “Today’s Weather is cool.”
+    // d. T > 10 then “OMG! Today’s weather is so Cool.”
+
+let tem = prompt('Type Temperature Centigrade Hare')
+if (tem > 40){
+    alert('It is too hot outside.')
+}else if(tem > 30 ){
+    alert('The Weather today is Normal.')
+}else if(tem > 20){
+    alert('Today’s Weather is cool.')
+}else if(tem > 10){
+    alert('OMG! Today’s weather is so Cool.')
+}
