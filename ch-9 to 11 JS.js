@@ -138,7 +138,6 @@ function checkColorMean() {
 function checkFuel() {
 
     let fuelInput = document.querySelector('#fuelInput').value;
-    // let fuelInput = number()
     console.log(fuelInput)
 
     let fuelResult = "";
@@ -315,11 +314,11 @@ if (value <= 10) {
 //     divisible by 3. Show the message to the user if the number
 //     is divisible by 3.
 
-// let value2 = prompt('Gusss the number')
-// if (value2 / 3)
-//     alert(value2 + " is an Even Number");
-// else
-//     alert(value2 + " is an Odd Number");
+let value2 = prompt('enteru number')
+if (value2 % 3 ===0)
+    alert(value2 + "Will divided by 3");
+else
+    alert(value2 + " can not divided by 3");
 
 
 // 9. Write a program that checks whether the given input is an
