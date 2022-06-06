@@ -325,7 +325,7 @@ if (value <= 10) {
 // 9. Write a program that checks whether the given input is an
 // even number or an odd number.
 
-let value1 = prompt('Gusss the number')
+let value1 = prompt('Check Even Or Odd Number')
 if (value1 % 2 == 0)
     alert(value1 + " is an Even Number");
 else
@@ -348,4 +348,54 @@ if (tem > 40){
     alert('Today’s Weather is cool.')
 }else if(tem > 10){
     alert('OMG! Today’s weather is so Cool.')
+}
+
+// 11. Write a program to create a calculator for +,-,*, / & %
+// using if statements. Take the following input:
+// a. First number
+// b. Second number
+// c. Operation (+, -, *, /, %)
+// Compute & show the calculated result to user.
+
+// Calculator
+let a = prompt("Select an operator"," +  - / * ");
+if(a == `+`)
+{
+    let b = + prompt("Enter 1st number");
+    let c = + prompt("Enter 2st number");
+    let d = + b+c;
+    alert(`${b} + ${c} = ${d}`)
+    document.write(`${b} + ${c} = ${d}`)
+
+}
+if(a == `-`)
+{
+    let b = + prompt("Enter 1st number");
+    let c = + prompt("Enter 2st number");
+    let d = + b-c;
+    alert(`${b} - ${c} = ${d}`)
+    document.write(`${b} - ${c} = ${d}`)
+  
+}
+if(a == `*`)
+{
+    let b = + prompt("Enter 1st number");
+    let c = + prompt("Enter 2st number");
+    let d = + b*c;
+    alert(`${b} x ${c} = ${d}`);
+    document.write(`${b} x ${c} = ${d}`);
+
+}
+if(a == `/`)
+{
+    let b = + prompt("Enter 1st number");
+    let c = + prompt("Enter 2st number");
+    let d = + b/c;
+    alert(`${b} / ${c} = ${d}`);
+    document.write(`${b} / ${c} = ${d}`);
+ 
+}
+else{
+    
+
 }
