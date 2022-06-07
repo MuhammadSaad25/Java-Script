@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,7 +8,72 @@
     <script src="./ch-12 to 13.js"></script>
     <title>Document</title>
 </head>
+
 <body>
-    <!-- <button onclick="qOne()">Question 01</button></a> -->
+
+    <!-- Write a program that takes a character (number or string)
+    in a variable & checks whether the given input is a
+    number, uppercase letter or lower case letter -->
+
+    <h1>Q no 1 Write a program that takes a character (number or string)
+        in a variable & checks whether the given input is a
+        number, uppercase letter or lower case letter
+    </h1>
+    <form onsubmit="checkCharacter(); return false">
+        <label for="number">
+            <input type="" id="value">
+        </label>
+        <h1 id="Result"></h1>
+        <button type="submit">Check</button>
+    </form>
+
+
+    <!-- 2. Write a JavaScript program that accept two integers and
+    display the larger. Also show if the two integers are equal. -->
+
+    <h1>Q no 2 Write a JavaScript program that accept two integers and
+        display the larger. Also show if the two integers are equal.</h1>
+    <form onsubmit="checkValue(); return false">
+        <label for="number">
+            <input type="number" id="num1" step="any">
+        </label>
+        <label for="number">
+            <input type="number" id="num2" step="any">
+        </label>
+        <h1 id="Result"></h1>
+        <button type="submit">Check</button>
+    </form>
+
+    <!-- 3. Write a program that takes input a number from user &
+    state whether the number is positive, negative or zero. -->
+
+    <h1>Q no 3. Write a program that takes input a number from user &
+        state whether the number is positive, negative or zero.
+    </h1>
+    <form onsubmit="checkP_N(); return false">
+        <label for="number">
+            <input type="number" id="value1" step="any">
+        </label>
+        <h1 id="Result"></h1>
+        <button type="submit">Check</button>
+    </form>
+
+    <!-- 4. Write a program that takes a character (i.e. string of
+    length 1) and returns true if it is a vowel, false otherwise -->
+
+
+    <h1>Q no 4. Write a program that takes a character (i.e. string of
+        length 1) and returns true if it is a vowel, false otherwise
+    </h1>
+    <form onsubmit="checkVowel(); return false">
+        <label for="text">
+            <input type="text" id="value2">
+        </label>
+        <h1 id="Result"></h1>
+        <button type="submit">Check</button>
+    </form>
+
+
 </body>
+
 </html>
