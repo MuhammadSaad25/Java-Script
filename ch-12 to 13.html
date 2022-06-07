@@ -72,6 +72,39 @@
         <h1 id="Result"></h1>
         <button type="submit">Check</button>
     </form>
+    <!-- 5. Write a program that
+    a. Store correct password in a JS variable.
+    b. Asks user to enter his/her password
+    c. Validate the two passwords:
+    i. Check if user has entered password. If not, then
+    give message “ Please enter your password”
+    ii. Check if both passwords are same. If they are
+    same, show message “Correct! The password you
+    entered matches the original password”. Show
+    “Incorrect password” otherwise -->
+<h1>
+   <br> 5. Write a program that
+   <br> a. Store correct password in a JS variable.
+   <br> b. Asks user to enter his/her password
+   <br> c. Validate the two passwords:
+   <br> i. Check if user has entered password. If not, then
+   <br> give message “ Please enter your password”
+   <br> ii. Check if both passwords are same. If they are
+   <br> same, show message “Correct! The password you
+   <br> entered matches the original password”. Show
+   <br> “Incorrect password” otherwise   
+</h1>
+
+<form onsubmit="checkPassword(); return false">
+    <label for="password">Password
+        <input type="password" id="pass1">
+    </label>
+    <label for="number">Confirm Password
+        <input type="password" id="pass2" >
+    </label>
+    <h1 id="Result"></h1>
+    <button type="submit">Check</button>
+</form>
 
 
 </body>

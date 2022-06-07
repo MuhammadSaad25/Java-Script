@@ -76,3 +76,31 @@ else {
     alert(`${value2} is not a vowel`);
 }
 }
+
+// 5. Write a program that
+// a. Store correct password in a JS variable.
+// b. Asks user to enter his/her password
+// c. Validate the two passwords:
+// i. Check if user has entered password. If not, then
+// give message “ Please enter your password”
+// ii. Check if both passwords are same. If they are
+// same, show message “Correct! The password you
+// entered matches the original password”. Show
+// “Incorrect password” otherwise
+
+function checkPassword() {
+
+let pass1 = document.querySelector(`#pass1`).value;
+let pass2 = document.querySelector(`#pass2`).value;
+
+if(pass1 == ""){
+    alert(`Please Enter Your Password`)
+}else if (pass2 == ""){
+    alert(`Please Your Confirm Password`)
+}else if(pass1 == pass2){
+    alert(`Correct! The password you entered matches the original password`)
+}else if (pass1 != pass2)
+    alert(`Incorrect password`)
+
+
+}
