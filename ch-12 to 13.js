@@ -3,31 +3,31 @@
 // in a variable & checks whether the given input is a
 // number, uppercase letter or lower case letter
 
-function checkCharacter(){
-let character = document.querySelector(`#value`).value;
+function checkCharacter() {
+    let character = document.querySelector(`#value`).value;
 
-if (character == "" || character == null || character == " " || character == "  " || character == "   " || character == "    " || character == "     ") {
-    alert("Empty String");
-}
-else if (!isNaN(character)) {
-    alert(character + ' is a Number');
-}
-else if (character == character.toUpperCase()) {
-    alert(character + ' is Upper Case');
-}
-else if (character == character.toLowerCase()) {
-    alert(character + ' is Lower Case');
-}
-else {
-    alert('Please enter an Alphabet or a Number');
-}
+    if (character == "" || character == null || character == " " || character == "  " || character == "   " || character == "    " || character == "     ") {
+        alert("Empty String");
+    }
+    else if (!isNaN(character)) {
+        alert(character + ' is a Number');
+    }
+    else if (character == character.toUpperCase()) {
+        alert(character + ' is Upper Case');
+    }
+    else if (character == character.toLowerCase()) {
+        alert(character + ' is Lower Case');
+    }
+    else {
+        alert('Please enter an Alphabet or a Number');
+    }
 }
 
 // 2. Write a JavaScript program that accept two integers and
 // display the larger. Also show if the two integers are equal.
 
 
-function checkValue(){
+function checkValue() {
     let num1 = document.querySelector(`#num1`).value;
     let num2 = document.querySelector(`#num2`).value;
     if (num1 > num2) {
@@ -41,40 +41,40 @@ function checkValue(){
     }
 }
 
-    // <!-- 3. Write a program that takes input a number from user &
-    // state whether the number is positive, negative or zero. -->
+// <!-- 3. Write a program that takes input a number from user &
+// state whether the number is positive, negative or zero. -->
 
 function checkP_N() {
 
-let value1 = document.querySelector(`#value1`).value;
+    let value1 = document.querySelector(`#value1`).value;
 
-if (value1 > 0) {
-    alert("The number is positive");
+    if (value1 > 0) {
+        alert("The number is positive");
+    }
+
+    else if (value1 == 0) {
+        alert("The number is zero");
+    }
+
+    else {
+        alert("The number is negative");
+    }
 }
 
-else if (value1 == 0) {
-  alert("The number is zero");
-}
+// 4. Write a program that takes a character (i.e. string of
+// length 1) and returns true if it is a vowel, false otherwise
 
-else {
-     alert("The number is negative");
-}
-}
-
-    // 4. Write a program that takes a character (i.e. string of
-    // length 1) and returns true if it is a vowel, false otherwise
-    
 
 function checkVowel() {
 
-let value2 = document.querySelector(`#value2`).value;
+    let value2 = document.querySelector(`#value2`).value;
 
-if (value2 == "a" || value2 == "e" || value2 == "i" || value2 == "o" || value2 == "u" || value2 == "A" || value2 == "E" || value2 == "I" || value2 == "O" || value2 == "U") {
-    alert(`${value2} is a vowel`);
-}
-else {
-    alert(`${value2} is not a vowel`);
-}
+    if (value2 == "a" || value2 == "e" || value2 == "i" || value2 == "o" || value2 == "u" || value2 == "A" || value2 == "E" || value2 == "I" || value2 == "O" || value2 == "U") {
+        alert(`${value2} is a vowel`);
+    }
+    else {
+        alert(`${value2} is not a vowel`);
+    }
 }
 
 // 5. Write a program that
@@ -90,17 +90,49 @@ else {
 
 function checkPassword() {
 
-let pass1 = document.querySelector(`#pass1`).value;
-let pass2 = document.querySelector(`#pass2`).value;
+    let pass1 = document.querySelector(`#pass1`).value;
+    let pass2 = document.querySelector(`#pass2`).value;
 
-if(pass1 == ""){
-    alert(`Please Enter Your Password`)
-}else if (pass2 == ""){
-    alert(`Please Your Confirm Password`)
-}else if(pass1 == pass2){
-    alert(`Correct! The password you entered matches the original password`)
-}else if (pass1 != pass2)
-    alert(`Incorrect password`)
+    if (pass1 == "") {
+        alert(`Please Enter Your Password`)
+    } else if (pass2 == "") {
+        alert(`Please Your Confirm Password`)
+    } else if (pass1 == pass2) {
+        alert(`Correct! The password you entered matches the original password`)
+    } else if (pass1 != pass2) {
+        alert(`Incorrect password`)
+    }
+}
 
+// 6. This if/else statement does not work. Try to fix it:
+
+
+function checkStatement() {
+    let greeting;
+    let hour = document.querySelector("#value3").value;
+    if (hour < 18) {
+        greeting = "Good day";
+    } else {
+        greeting = "Good evening";
+    }
+
+    alert(greeting)
+
+}
+
+// <!-- 7. Write a program that takes time as input from user in 24
+//     hours clock format like: 1900 = 7pm. Implement the
+//     following case using if, else & else if statements -->
+
+function checkTime() {
+    let time = document.querySelector("#value4").value;
+    if (time >= 1900 && time < 1200) {
+        alert ("Good Morning");
+    } else if (time >= 1200 && time < 1700) {
+        alert ("Good Afternoon");
+    } else if (time >= 1700 && time < 2100) {
+        alert ("Good Afternoon");
+    } else if (time >= 2100 && time <= 2359)
+        alert('Good Night') 
 
 }
